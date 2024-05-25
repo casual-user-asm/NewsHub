@@ -18,6 +18,10 @@ The app contains 2 views:
 
 You can also clone the project and open it in localhost or you can run the project with Docker(the Docker instructions are below) or enjoy the preview video below instead :smile:
 
+
+https://github.com/casual-user-asm/NewsHub/assets/82218252/fcb96892-f776-4bd4-a21e-9e1886b86d73
+
+
 ## Running the Project with Docker
 
 ### Prerequisites
