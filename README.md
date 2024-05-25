@@ -47,16 +47,16 @@ https://github.com/casual-user-asm/NewsHub/assets/82218252/61082801-f61d-4717-8c
         SECRET_KEY=*
         
       # PostgreSQL database settings
-        DATABASE_NAME=postgres
-        DATABASE_USER=postgres
-        DATABASE_PASSWORD=postgres
-        DATABASE_HOST=my_postgres
-        DATABASE_PORT=5432
+        - DATABASE_NAME=postgres
+        - DATABASE_USER=postgres
+        - DATABASE_PASSWORD=postgres
+        - DATABASE_HOST=my_postgres
+        - DATABASE_PORT=5432
         
       # API key for Groq
        GROQ_API_KEY=*
        
-    - For the `GROQ_API_KEY`, you'll need to obtain it from the Groq website. Follow these steps:
+     For the `GROQ_API_KEY`, you'll need to obtain it from the Groq website. Follow these steps:
      - Go to [Groq's website](https://groq.com/).
      - Click on 'GroqCloud'.
      - In GroqCloud, you can create your API key.
