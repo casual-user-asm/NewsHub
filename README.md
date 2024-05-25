@@ -47,9 +47,9 @@ https://github.com/casual-user-asm/NewsHub/assets/82218252/61082801-f61d-4717-8c
         SECRET_KEY=*
       
       - Run this command in your terminal to generate a new secret key:
-     ```bash
-     python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
-     ```
+         ```bash
+         python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+         ```
         
       # PostgreSQL database settings
         - DATABASE_NAME=postgres
