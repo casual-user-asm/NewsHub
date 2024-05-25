@@ -1,0 +1,19 @@
+# Ignore .env file
+.env
+
+# Ignore IDE-specific directories
+.idea/
+.vscode/
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore local development files and directories
+db.sqlite3
+*.sqlite3
+*.db
+*.log
+
+# Allow Supervisor configuration files
+!supervisor/*.conf

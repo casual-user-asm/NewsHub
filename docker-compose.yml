@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    env_file:
+      - .env
+    container_name: news
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - my_postgres
+
+  my_postgres:
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    container_name: my_postgres
+    volumes:
+      - pgdbdata:/var/lib/postgresql/data/
+
+volumes:
+  pgdbdata: null
+

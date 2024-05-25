@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Detail{% endblock %}
+{% block content %}
+<div id="main">
+	<div class="inner">
+		{% for i in item %}
+			<h4>{{ i.title }}</h4>
+			<p>{{ i.short_text }}</p>
+			<span>Read original article - </span><a href="{{ i.url }}" target="_blank">{{ i.url }}</a><br><br>
+		<hr>
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}

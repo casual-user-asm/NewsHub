@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}NewsHub{% endblock %}
+{% block content %}
+<div id="main">
+	<div class="inner">
+		<header>
+			<h1>Stay Sharp, Stay Briefed: Your News, Condensed.</h1>
+			<p>NewsHub: Your shortcut to staying informed. Dive into concise summaries of top stories and save time without compromising on knowledge.</p>
+		</header>
+		<section class="tiles">
+			{% for i in data %}
+			<article class="style5">
+				<span class="image">
+					<img src="{% static 'coreNews/images/pic03.jpg' %}" alt="" />
+				</span>
+				<a href="{% url 'detail' item=i %}">
+					<h2>{{ i }}</h2>
+					<div class="content">
+						{% if i == 'esspreso' %}
+							<p>Ukrainian Breaking News</p>
+						{% elif i == 'guardian' %}
+							<p>Latest US news, world news, sports, business, opinion, analysis and reviews from the Guardian, the world's leading liberal voice.</p>
+						{% elif i == 'ekathimerini' %}
+							<p>News in Greece and the World Online | The No. 1 Daily Political and Economic Newspaper.</p>
+						{% elif i == 'south_china' %}
+							<p>News, opinions, infographics and videos on China issues: geopolitics, diplomacy, economy, technology and lifestyle.</p>
+						{% elif i == 'hindu' %}
+							<p>Indian News in English.</p>
+						{% elif i == 'new_yorker' %}
+							<p>In-depth reporting, commentary on breaking news, political analysis, and opinion from The New Yorker.</p>
+						{% elif i == 'economist' %}
+							<p>Get in-depth global news and analysis.</p>
+						{% elif i == 'ukrnet' %}
+							<p>Latest news from Ukraine.</p>
+						{% endif %}
+					</div>
+				</a>
+			</article>
+			{% endfor %}
+		</section>
+	</div>
+</div>
+{% endblock %}
