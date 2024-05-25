@@ -3,9 +3,9 @@
 This project is designed to revolutionize the way you consume news by offering concise summaries of original news articles. The primary goal is to help you save time by providing short versions of articles that capture the main points and essential information. Instead of reading lengthy articles, you can quickly grasp the core message and stay informed efficiently. Whether you're on the go or just looking to streamline your news intake, our service ensures you get the information you need without the extra reading time.
 
 **NewsHub:** Your shortcut to staying informed. Dive into concise summaries of top stories and save time without compromising on knowledge.
+![Facebook cover - 1 (1)](https://github.com/casual-user-asm/NewsHub/assets/82218252/fd6d0d4e-deb3-4e76-9bc3-aa87d1550fd2)
 
 # Project Setup
-![Facebook cover - 1](https://github.com/casual-user-asm/NewsHub/assets/82218252/93f5f88a-b156-4ae3-aca8-a3dd1a5e042a)
 
 The app contains 2 views:
 
