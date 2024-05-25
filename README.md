@@ -5,6 +5,7 @@ This project is designed to revolutionize the way you consume news by offering c
 **NewsHub:** Your shortcut to staying informed. Dive into concise summaries of top stories and save time without compromising on knowledge.
 
 # Project Setup
+![Facebook cover - 1](https://github.com/casual-user-asm/NewsHub/assets/82218252/93f5f88a-b156-4ae3-aca8-a3dd1a5e042a)
 
 The app contains 2 views:
 
