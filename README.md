@@ -19,8 +19,7 @@ The app contains 2 views:
 You can also clone the project and open it in localhost or you can run the project with Docker(the Docker instructions are below) or enjoy the preview video below instead :smile:
 
 
-https://github.com/casual-user-asm/NewsHub/assets/82218252/61082801-f61d-4717-8c61-3043ade70dff
-
+https://github.com/casual-user-asm/NewsHub/assets/82218252/f3ef94a9-66b9-420a-8ac4-67c38f097c7c
 
 
 ## Running the Project with Docker
