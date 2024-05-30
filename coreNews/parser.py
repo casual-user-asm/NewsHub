@@ -11,10 +11,11 @@ from ReadAndGo.settings import BASE_DIR
 env = environ.Env(GROQ_API_KEY=(str))
 environ.Env.read_env(BASE_DIR / '.env')
 random_headers = UserAgent()
-news_data = {}
 header = {'User-Agent': random_headers.get_random_user_agent()}
+news_data = {}
 
 
+# Asynchronous function to fetch a webpage and return a BeautifulSoup object
 async def fetch_page(url, session):
     try:
         async with session.get(url) as response:
@@ -25,6 +26,7 @@ async def fetch_page(url, session):
         return None
 
 
+# Function to summarize text using the Groq API
 def keeper_sync(text):
     try:
         client = Groq(
@@ -51,10 +53,12 @@ def keeper_sync(text):
         return None
 
 
+# Asynchronous wrapper for the synchronous Groq API call
 async def keeper(text):
     return await asyncio.to_thread(keeper_sync, text)
 
 
+# Function to clean and combine article data
 async def clean_article_data(text):
     cleaned_text = re.sub(r'\*\*Article \d+:? [^\*]*\*\*', '', text)
     lines = cleaned_text.split('\n')
@@ -80,6 +84,7 @@ async def clean_article_data(text):
     return combined_lines
 
 
+# Function to process each news site
 async def process_site(fetch_func, url, session):
     try:
         outcome = await fetch_func(url, session)
@@ -87,6 +92,7 @@ async def process_site(fetch_func, url, session):
         print(e)
 
 
+# Functions to fetch and process news from different sources
 async def esspreso(url, session):
     soup = await fetch_page(url, session)
     important_news = soup.find_all('div', class_='news-tape-important')
@@ -511,6 +517,7 @@ async def ukrnet(url, session):
     print('%%% UkrNet Done %%%')
 
 
+# Main function to orchestrate the fetching and processing of all news sites
 async def main():
     async with aiohttp.ClientSession(headers=header) as session:
         tasks = [
