@@ -10,7 +10,7 @@
 		</header>
 		<section class="tiles">
 			{% for i in data %}
-			<article class="style5">
+			<article class="style1">
 				<span class="image">
 					<img src="{% static 'coreNews/images/pic03.jpg' %}" alt="" />
 				</span>
@@ -18,21 +18,33 @@
 					<h2>{{ i }}</h2>
 					<div class="content">
 						{% if i == 'esspreso' %}
-							<p>Ukrainian Breaking News</p>
+							<p>Ukrainian information channel created in 2013.</p>
 						{% elif i == 'guardian' %}
 							<p>Latest US news, world news, sports, business, opinion, analysis and reviews from the Guardian, the world's leading liberal voice.</p>
 						{% elif i == 'ekathimerini' %}
 							<p>News in Greece and the World Online | The No. 1 Daily Political and Economic Newspaper.</p>
-						{% elif i == 'south_china' %}
-							<p>News, opinions, infographics and videos on China issues: geopolitics, diplomacy, economy, technology and lifestyle.</p>
 						{% elif i == 'hindu' %}
-							<p>Indian News in English.</p>
+							<p>News feeds from India's National Newspaper.</p>
 						{% elif i == 'new_yorker' %}
 							<p>In-depth reporting, commentary on breaking news, political analysis, and opinion from The New Yorker.</p>
-						{% elif i == 'economist' %}
-							<p>Get in-depth global news and analysis.</p>
 						{% elif i == 'ukrnet' %}
-							<p>Latest news from Ukraine.</p>
+							<p>Ukrainian web portal, online news service.</p>
+						{% elif i == 'unian' %}
+							<p>Ukrainian independent news agency is a news agency operating on the Ukrainian market since 1993.</p>
+						{% elif i == 'nv' %}
+							<p>Ukrainian weekly socio-political magazine and information and news online resource.</p>
+						{% elif i == 'korespondent' %}
+							<p>Ukrainian weekly socio-political magazine.</p>
+						{% elif i == 'tsn' %}
+							<p>Daily news program of channel 1+1.</p>
+						{% elif i == 'pravda' %}
+							<p>Ukrainian online publication.</p>
+						{% elif i == 'cnn' %}
+							<p>TV channel from the USA with headquarters in Atlanta.</p>
+						{% elif i == 'euronews' %}
+							<p>European daily 24-hour news channel, combining video chronicle of world events and audio commentary in thirteen languages.</p>
+						{% elif i == 'times' %}
+							<p>American daily newspaper published in New York City since September 18, 1851.</p>
 						{% endif %}
 					</div>
 				</a>

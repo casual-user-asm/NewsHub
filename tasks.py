@@ -21,17 +21,22 @@ def data_in_database():
     with transaction.atomic():
         News.objects.all().delete()
 
-    for source, data in info.items():
-        publisher = source
-        for urls, content in data.items():
-            url = urls
-            article_title = content['title']
-            short_text = content['short_text']
-            News.objects.create(publisher=publisher, url=url, title=article_title, short_text=short_text)
+        news_instances = []
+        for source, data in info.items():
+            publisher = source
+            for urls, content in data.items():
+                url = urls
+                article_title = content['title']
+                short_text = content['short_text']
+                news_instances.append(News(publisher=publisher, url=url, title=article_title, short_text=short_text))
+
+        News.objects.bulk_create(news_instances)
 
 
-schedule.every(3600).seconds.do(data_in_database)
+if __name__ == '__main__':
+    data_in_database()
+    schedule.every(3600).seconds.do(data_in_database)
 
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
